@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com a Boengs Decora para consultar produtos personalizados e encomendas.">
+    <meta name="keywords" content="contato, orçamento, encomendas, canecas personalizadas">
+    <meta name="author" content="Viktor Raulino Boeng">
+    <title>Contato | Boengs Decora</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <a class="logo" href="index.html">Boengs <span>Decora</span></a>
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="contato.html" class="active">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-intro">
+            <p class="eyebrow">FALE COM A GENTE</p>
+            <h1>Vamos conversar sobre sua ideia?</h1>
+            <p>Conte um pouco sobre o produto ou a personalização que procura. Quanto mais detalhes, melhor para orientar seu pedido.</p>
+        </section>
+
+        <div class="contact-layout">
+            <aside class="contact-aside">
+                <p class="eyebrow">PARA AGILIZAR</p>
+                <h2>O que informar</h2>
+                <ul>
+                    <li>Qual produto ou tipo de peça você deseja.</li>
+                    <li>Quantidade aproximada e se é uma encomenda.</li>
+                    <li>Ideia de arte, mensagem ou personalização.</li>
+                    <li>Prazo ou data importante, se houver.</li>
+                </ul>
+                <p>Pedidos personalizados e caixas fechadas podem depender de disponibilidade e confirmação dos detalhes.</p>
+                <a class="text-link" href="produtos.html">Ver produtos disponíveis</a>
+            </aside>
+
+            <form class="contact-form">
+                <div class="form-heading">
+                    <h2>Solicite informações</h2>
+                    <p>Preencha os campos para organizar os detalhes da sua solicitação.</p>
+                </div>
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" autocomplete="name" placeholder="Seu nome" required>
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" autocomplete="email" placeholder="seuemail@exemplo.com" required>
+
+                <label for="mensagem">Detalhes do produto ou pedido</label>
+                <textarea id="mensagem" name="mensagem" rows="5" placeholder="Descreva o produto, a quantidade e a personalização desejada." required></textarea>
+
+                <p class="form-note">Este formulário é demonstrativo e ainda não envia os dados. Ao enviar, você verá essa confirmação na página.</p>
+                <button type="submit">Verificar solicitação</button>
+                <div class="form-response" id="form-response" role="status" aria-live="polite" hidden></div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <a class="footer-brand" href="index.html">Boengs Decora</a>
+        <p>Canecas, presentes e personalizados para os seus momentos.</p>
+        <p class="copyright">&copy; 2026 Boengs Decora - Todos os direitos reservados. CNPJ: 45.489.335/0001-53</p>
+    </footer>
+    <script>
+        document.querySelector('.contact-form').addEventListener('submit', (event) => {
+            event.preventDefault();
+            const response = document.querySelector('#form-response');
+            response.textContent = 'Os dados foram preenchidos, mas não foram enviados. O formulário ainda precisa ser conectado a um canal de atendimento.';
+            response.hidden = false;
+        });
+    </script>
+</body>
+</html>
