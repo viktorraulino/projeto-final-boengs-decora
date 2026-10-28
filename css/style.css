@@ -6,6 +6,7 @@
 }
 
 :root {
+    /* Variáveis CSS centralizam a identidade visual; altere aqui para atualizar as cores do site. */
     --primary-color: #78658a;
     --primary-dark: #554466;
     --primary-light: #eee8f3;
@@ -25,6 +26,7 @@ html {
 body {
     background: var(--bg-light);
     color: var(--text-dark);
+    /* Flex em coluna mantém o rodapé no fim mesmo quando a página tem pouco conteúdo. */
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -135,6 +137,7 @@ h3 {
 }
 
 .home-hero {
+    /* Grid organiza texto e imagem em colunas; a media query empilha as colunas em telas estreitas. */
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
     align-items: center;
@@ -217,6 +220,7 @@ h3 {
     position: relative;
     max-width: 960px;
     margin: 0 auto;
+    /* Esconde os slides fora da área visível do carrossel. */
     overflow: hidden;
     border: 1px solid var(--border);
     border-radius: 14px;
@@ -225,6 +229,7 @@ h3 {
 }
 
 .carousel-slide {
+    /* Os slides ficam lado a lado; JavaScript altera transform para mover esta faixa. */
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
@@ -239,6 +244,7 @@ h3 {
     width: 100%;
     height: 400px;
     background: var(--white);
+    /* Contém a imagem inteira sem cortar, mesmo que a proporção seja diferente da área. */
     object-fit: contain;
 }
 
@@ -370,6 +376,7 @@ h3 {
 }
 
 .products-layout {
+    /* Coluna lateral para informações e coluna flexível para o catálogo. */
     display: grid;
     grid-template-columns: minmax(220px, 260px) minmax(0, 1fr);
     align-items: start;
@@ -425,6 +432,7 @@ h3 {
 }
 
 .products-grid {
+    /* auto-fit cria quantas colunas couberem, respeitando a largura mínima dos cartões. */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     align-items: stretch;
@@ -615,6 +623,7 @@ h3 {
 
 .contact-form input,
 .contact-form textarea {
+    /* width: 100% combinado com border-box evita exceder a largura do formulário. */
     width: 100%;
     padding: 0.8rem 0.9rem;
     border: 1px solid #dcd5e2;
@@ -698,6 +707,7 @@ footer > p:not(.copyright) {
 }
 
 @media (max-width: 850px) {
+    /* Ajustes para tablets e telas médias. */
     header {
         padding-right: 1.25rem;
         padding-left: 1.25rem;
@@ -720,6 +730,7 @@ footer > p:not(.copyright) {
 }
 
 @media (max-width: 680px) {
+    /* Em celulares, navegação e áreas em colunas passam a ocupar uma coluna. */
     header {
         flex-direction: column;
         gap: 0.7rem;
@@ -797,6 +808,7 @@ footer > p:not(.copyright) {
 }
 
 @media (prefers-reduced-motion: reduce) {
+    /* Respeita a preferência do sistema por menos animações e movimento. */
     html {
         scroll-behavior: auto;
     }
