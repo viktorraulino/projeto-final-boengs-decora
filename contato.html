@@ -72,9 +72,12 @@
     </footer>
     <script>
         document.querySelector('.contact-form').addEventListener('submit', (event) => {
+            // Impede o recarregamento padrão, pois este formulário ainda não envia dados a um servidor.
             event.preventDefault();
             const response = document.querySelector('#form-response');
+            // textContent insere texto simples sem interpretar conteúdo como HTML.
             response.textContent = 'Os dados foram preenchidos, mas não foram enviados. O formulário ainda precisa ser conectado a um canal de atendimento.';
+            // O retorno começa oculto e aparece após o envio do formulário.
             response.hidden = false;
         });
     </script>
